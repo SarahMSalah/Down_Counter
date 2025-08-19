@@ -24,8 +24,12 @@ The included testbench verifies the counter’s functionality. It performs four 
 •	Test 4: Decrement until zero – verifies the counter counts down to zero and sets the zero flag.
 Simulation also generates a VCD waveform file (Down_Counter_tb.vcd).
 
-Waveform Screenshots
-•	Waveform_Test1: Latch operation, counter loads input.
-•	Waveform_Test2: Latch priority when both latch and dec are high.
-•	Waveform_Test3: Counter decrementing on each clock pulse.
-•	Waveform_Test4: Counter reaches zero and zero flag goes high.
+Waveform Screenshots  
+- **Waveform_Test1:** Latch operation  
+  ![Waveform Test 1](Waveform_Test%201.png)  
+- **Waveform_Test2:** Latch priority  
+  ![Waveform Test 2](Waveform_Test%202.png)  
+- **Waveform_Test3:** Counter decrementing  
+  ![Waveform Test 3](Waveform_Test%203.png)  
+- **Waveform_Test4:** Counter reaches zero and `zero` flag goes high  
+  ![Waveform Test 4](Waveform_Test%204.png) 
