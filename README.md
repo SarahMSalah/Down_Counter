@@ -1,2 +1,31 @@
-# Down_Counter
-This project contains a 4-bit synchronous down counter written in Verilog. It supports loading an initial value, decrementing on each clock pulse, and raising a flag when the counter reaches zero.
+Description
+This project contains a 4-bit synchronous down counter written in Verilog. The counter can load an input value, decrement on each clock pulse, and raise a flag when the counter reaches zero.
+
+Module: Down_Counter
+Inputs
+•	IN [3:0] – 4-bit value to load into the counter.
+•	latch – When high, the value of IN is loaded into the counter on the rising edge of the clock.
+•	dec – When high, the counter decrements by 1 on each clock edge (as long as the counter is not already zero).
+•	clk – Clock signal, positive edge triggered.
+Outputs
+•	counter [3:0] – The current value of the counter.
+•	zero – A flag that goes high when the counter reaches zero.
+
+Functionality
+•	When latch is set to 1, the counter loads the input value IN.
+•	When dec is set to 1 and the counter has not yet reached zero, the counter decrements by 1 on each rising clock edge.
+•	Once the counter reaches 0000, the zero output goes high.
+
+Testbench: Down_Counter_tb
+The included testbench verifies the counter’s functionality. It performs four tests:
+•	Test 1: Latch operation – ensures the counter correctly loads the input value.
+•	Test 2: Latch priority – verifies that latch has priority when both latch and dec are high.
+•	Test 3: Decrement operation – ensures the counter decrements correctly.
+•	Test 4: Decrement until zero – verifies the counter counts down to zero and sets the zero flag.
+Simulation also generates a VCD waveform file (Down_Counter_tb.vcd).
+
+Waveform Screenshots
+•	Waveform_Test1: Latch operation, counter loads input.
+•	Waveform_Test2: Latch priority when both latch and dec are high.
+•	Waveform_Test3: Counter decrementing on each clock pulse.
+•	Waveform_Test4: Counter reaches zero and zero flag goes high.
