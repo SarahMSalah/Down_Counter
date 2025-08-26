@@ -1,5 +1,5 @@
-Description
-This project contains a 4-bit synchronous down counter written in Verilog. The counter can load an input value, decrement on each clock pulse, and raise a flag when the counter reaches zero.
+Description:
+This repository contains a 4-bit synchronous down counter written in Verilog. The counter can load an input value, decrement on each clock pulse, and raise a flag when the counter reaches zero.
 
 Module: Down_Counter
 Inputs
